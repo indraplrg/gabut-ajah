@@ -12,7 +12,7 @@ const Navbar = () => {
             <input
                type="text"
                placeholder="Films"
-               className="outline-none px-1 bg-transparent"
+               className="outline-none px-1 bg-transparent text-white"
                onChange={(e) => setFilms(e.target.value)}
             />
             <button
