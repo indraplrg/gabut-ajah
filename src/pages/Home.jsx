@@ -14,7 +14,6 @@ const Home = () => {
          })
          .then((data) => {
             setSearch(data.Search);
-            console.log(data.Search);
          });
    }
 
