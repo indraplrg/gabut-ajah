@@ -14,10 +14,11 @@ const Home = () => {
             return data.json();
          })
          .then((data) => {
-            if (by == "i") {
+            if (by == "s") {
+               setSearch(data.Search);
+            } else {
                SetId(data);
             }
-            setSearch(data.Search);
          });
    }
 

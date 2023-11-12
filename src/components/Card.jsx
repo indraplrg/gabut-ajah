@@ -8,7 +8,11 @@ const Card = () => {
       <>
          <div className="w-full">
             <div className="w-full flex p-5 text-white">
-               <img src={id ? id.Poster : null} alt="" className="max-h-min" />
+               <img
+                  src={id.Poster ? id.Poster : null}
+                  alt=""
+                  className="max-h-min"
+               />
                <div className="ml-3 text-lg">
                   {id && (
                      <table>
@@ -59,7 +63,11 @@ const Card = () => {
                            }}
                         >
                            <img
-                              src={e.Poster}
+                              src={
+                                 e.Poster
+                                    ? e.Poster
+                                    : "./public/No_Image_Available.jpg"
+                              }
                               alt={`Gambar ${e.Title}`}
                               className="w-full hover:scale-105 transition-all ease-in-out"
                            />
