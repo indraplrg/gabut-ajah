@@ -6,20 +6,24 @@ export const FilmsContext = createContext();
 
 const Home = () => {
    const [search, setSearch] = useState("");
+   const [id, SetId] = useState("");
 
-   function requestData(e) {
-      fetch(`https://www.omdbapi.com/?apikey=962a66dd&s=${e}`)
+   function requestData(e, by) {
+      fetch(`https://www.omdbapi.com/?apikey=962a66dd&${by}=${e}`)
          .then((data) => {
             return data.json();
          })
          .then((data) => {
+            if (by == "i") {
+               SetId(data);
+            }
             setSearch(data.Search);
          });
    }
 
    return (
       <>
-         <FilmsContext.Provider value={{ search, requestData }}>
+         <FilmsContext.Provider value={{ search, requestData, id }}>
             <Navbar />
             <Card />
          </FilmsContext.Provider>

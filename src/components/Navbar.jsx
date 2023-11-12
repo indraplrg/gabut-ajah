@@ -18,7 +18,7 @@ const Navbar = () => {
             <button
                className="text-white px-2 py-1 rounded-md ease-in-out transition-all"
                onClick={() => {
-                  requestData(film);
+                  requestData(film, "s");
                }}
             >
                Search
